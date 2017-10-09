@@ -24,5 +24,5 @@ class DuelistTournament(models.Model):
     duelist=models.ForeignKey(Duelist, verbose_name='参加者', related_name='duelistTournaments')
     tournament=models.ForeignKey(Tournament, verbose_name='大会', related_name='duelistTournaments')
     def __str__(self):
-        return "大会参加者"
+        return "大会参加者" 
 
