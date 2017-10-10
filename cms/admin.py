@@ -3,8 +3,8 @@ from django.contrib import admin
 from cms.models import Duelist, Tournament, DuelistTournament
 
 class DuelistAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name',)
-    list_display_link = ('id', 'name',)
+    list_display = ('id', 'name', 'mailAddress', 'passward',)
+    list_display_link = ('id', 'name', 'mailAddress', 'passward',)
 
 class TournamentAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',)
