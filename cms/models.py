@@ -13,6 +13,7 @@ class Tournament(models.Model):
 class Duelist(models.Model):
     """参加者"""
     name = models.CharField('名前', max_length=255)
+    mailAddress = models.CharField('メールアドレス', max_length=255)
     def __str__(self):
         return self.name
 
