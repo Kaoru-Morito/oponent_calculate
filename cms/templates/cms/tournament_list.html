@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+
 {% block title %}大会の一覧{% endblock title %}
 
 {% block extrahead %}
@@ -16,7 +18,6 @@ table {
         <tr>
           <th>大会ID</th>
           <th>大会名</th>
-          <th>開催日</th>
           <th>操作</th>
         </tr>
       </thead>
@@ -24,7 +25,6 @@ table {
         {% for tournament in tournaments %}
         <tr>
           <td>{{ tournament.id }}</td>
-          <td>{{ tournament.date }}</td>
           <td><a href="{%url 'cms:duelists_by_tournament' tournament_id=tournament.id %}" class="btn btn-default btn-sm">{{ tournament.name }}</td>
           <td>
             <a href="{% url 'cms:tournament_mod' tournament_id=tournament.id %}" class="btn btn-default btn-sm">編集</a> 

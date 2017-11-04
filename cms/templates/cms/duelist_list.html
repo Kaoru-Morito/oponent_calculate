@@ -11,7 +11,7 @@ table {
 {% endblock %}
 
 {% block content %}
-    <h3 class="page-header">参加者の一覧</h3>
+    <h3 class="page-header">{{ tournament.name }}参加者一覧</h3>
     <a href="{% url 'cms:duelist_add' %}" class="btn btn-default btn-sm">追加</a>
     <table class="table table-striped table-bordered">
       <thead>
@@ -31,6 +31,7 @@ table {
           <td>
             <a href="{% url 'cms:duelist_mod' duelist_id=duelist.id %}" class="btn btn-default btn-sm">編集</a> 
             <a href="{% url 'cms:duelist_del' duelist_id=duelist.id %}" class="btn btn-default btn-sm">削除</a> 
+          </td>
         </tr>
         {% endfor %}
       </tbody>
